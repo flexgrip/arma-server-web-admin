@@ -45,7 +45,7 @@ define(function (require) {
       laddaBtn.start();
 
       $.ajax({
-        url: "/api/mods/" + this.model.get('name'),
+        url: "/api/playwithsix/" + this.model.get('name'),
         type: 'PUT',
         success: function (resp) {
           laddaBtn.stop();

@@ -8,6 +8,10 @@ module.exports = {
     '-noSound',
     '-world=empty'
   ],
+  playWithSix: {
+    enable: false,
+    liteMods: true,
+  },
   serverMods: [ // Mods used exclusively by server and not shared with clients
     '@mod1',
     '@mod2',

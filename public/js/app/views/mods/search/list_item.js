@@ -38,7 +38,7 @@ define(function (require) {
       this.$el.find('.ladda-button').addClass('disabled');
 
       $.ajax({
-        url: "/api/mods/",
+        url: "/api/playwithsix/",
         type: 'POST',
         data: {
           name: this.model.get('name'),

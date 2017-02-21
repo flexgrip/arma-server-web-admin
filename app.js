@@ -9,6 +9,7 @@ var config = require('./config');
 var Manager = require('./lib/manager');
 var Missions = require('./lib/missions');
 var Mods = require('./lib/mods');
+var PlayWithSix = require('./lib/playwithsix');
 var Logs = require('./lib/logs');
 
 var app = express();
@@ -43,6 +44,11 @@ app.use('/api/missions', require('./routes/missions')(missions));
 app.use('/api/mods', require('./routes/mods')(mods));
 app.use('/api/servers', require('./routes/servers')(manager, mods));
 app.use('/api/settings', require('./routes/settings')(config));
+
+if (config.playWithSix && config.playWithSix.enabled) {
+  var playWithSix = new PlayWithSix(config);
+  app.use('/api/playwithsix', require('./routes/playwithsix')(playWithSix));
+}
 
 io.on('connection', function (socket) {
   socket.emit('mods', mods.mods);

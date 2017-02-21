@@ -67,7 +67,7 @@ define(function (require) {
       self.modal.$el.find('.btn.cancel').addClass('disabled');
 
       $.ajax({
-        url: '/api/mods/search',
+        url: '/api/playwithsix/search',
         type: 'POST',
         data: {
           query: $form.find('.query').val()

@@ -1,12 +1,12 @@
 <td>
   <a href='#mods/<%-name%>'><%-name%></a>
 
-  <% if (playWithSix) { %>
+  <% if (typeof playWithSix !== "undefined" && playWithSix) { %>
     <img src="/images/playwithsix.png" height="20px" width="20px" />
   <% } %>
 </td>
 <td>
-  <% if (progress) { %>
+  <% if (typeof progress !== "undefined" && progress) { %>
     <div class="progress" style="margin-bottom: 0;">
       <div class="progress-bar" role="progressbar" aria-valuenow="<%-progress%>" aria-valuemin="0" aria-valuemax="100" style="width: <%-progress%>%; min-width: 2em;">
         <%-progress%>%
@@ -18,7 +18,7 @@
       Delete
     </a>
 
-    <% if (outdated) { %>
+    <% if (typeof outdated !== "undefined" && outdated) { %>
       <a class="btn btn-primary btn-xs update ladda-button pull-right" data-style="expand-left" style="margin-right: 8px">
         <span class="glyphicon glyphicon-save"></span>
         Update
