@@ -13,6 +13,7 @@ module.exports = {
     '@mod2',
   ],
   steam: {
+    apiKey: '1234567890ABCDE', // https://steamcommunity.com/dev/apikey
     path: 'path-to-main-steam-folder',
   },
   auth: { // If both username and password is set, HTTP Basic Auth will be used
