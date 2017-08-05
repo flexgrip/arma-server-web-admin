@@ -15,6 +15,8 @@ module.exports = {
   steam: {
     apiKey: '1234567890ABCDE', // https://steamcommunity.com/dev/apikey
     path: 'path-to-main-steam-folder',
+    username: 'steam_username',
+    password: 'steam_password',
   },
   auth: { // If both username and password is set, HTTP Basic Auth will be used
     username: '', // Username for HTTP Basic Auth
